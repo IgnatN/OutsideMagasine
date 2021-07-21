@@ -1,0 +1,17 @@
+
+.first-div {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+}
+.container {
+display: flex;
+justify-content: space-between;
+    cursor: pointer;
+    background-color:rgb(255, 209, 209);
+}
+button {
+    cursor: pointer;
+    background-color: rgb(223, 187, 187);
+    border-radius: 50%;
+}
