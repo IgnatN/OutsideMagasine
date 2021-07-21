@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { Product } from '../service/type';
+import { Product } from '../../../service/type';
 
 @Component({
     selector: 'app-product',
@@ -13,7 +13,6 @@ export class ProductComponent implements OnInit {
     @Output() addToBagEvent = new EventEmitter<number>();
 
     ngOnInit() {
-        console.log(this.product);
     }
     addToBag(id: number) {
         this.addToBagEvent.emit(id);
