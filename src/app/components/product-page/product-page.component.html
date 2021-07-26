@@ -1,0 +1,9 @@
+<div class="first-div">
+
+    <div class="container">
+        <app-product *ngFor='let element of products' [product]='element' (addToBagEvent)='addProduct($event)'>
+        </app-product>
+
+    </div>
+    <b class="bag">In BAG: {{chartCount}}</b>
+</div>

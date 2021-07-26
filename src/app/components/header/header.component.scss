@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.list {
+    display: flex;
+    justify-content: space-around;
+}
+a {
+    font-size: 20px;
+    color:rgb(207, 188, 188);
+    text-decoration: none;
+}
+
+.li {
+    list-style-type: none;
+}
