@@ -10,13 +10,13 @@ import { Product } from '../../../service/type';
 
 export class ProductComponent implements OnInit {
     @Input() product!: Product;
-    @Output() addToBagEvent = new EventEmitter<number>();
+    @Output() addToBagEvent = new EventEmitter<Product>();
 
     ngOnInit() {
         console.log(this.product);
     }
-    addToBag(id: number) {
-        this.addToBagEvent.emit(id);
+    addToBag(product: Product) {
+        this.addToBagEvent.emit(product);
     }
 
 }

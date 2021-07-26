@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { BehaviorSubject, Observable } from "rxjs";
 import { Product } from "./type";
 
 @Injectable({
@@ -24,9 +25,14 @@ export class OutsideMagasineService {
         img: 'https://i.ebayimg.com/images/g/QDcAAOSwrXhfynwO/s-l300.jpg'
     }
     ];
-
+    chartProducts$?: BehaviorSubject<Product[]>;
     getProducts(): Product[] {
         return this.products;
     }
-
+    set addChartProducts(products: Product[]) {
+        this.chartProducts$?.next(products)
+    }
+    get getChartProducts(): Observable<Product[]> | undefined {
+        return this.chartProducts$?.asObservable()
+    }
 }

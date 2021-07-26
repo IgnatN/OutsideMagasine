@@ -8,7 +8,7 @@ import { Product } from "src/app/service/type";
     styleUrls: ['product-page.component.scss']
 })
 export class ProductPageComponent implements OnInit {
-    productChartList: number[] = [];
+    productChartList: Product[] = [];
     chartCount: number = 0;
     products: Product[] = [];
 
@@ -20,15 +20,17 @@ export class ProductPageComponent implements OnInit {
 
     }
 
-    addProduct(id: number) {
-        let box = this.productChartList.indexOf(id);
+    addProduct(product: Product) {
+        let box = this.productChartList.indexOf(product);
         console.log(box)
         if (box >= 0) {
             this.chartCount--;
             this.productChartList.splice(box, 1)
+            this.productService.addChartProducts = this.productChartList
             return;
         }
         this.chartCount++;
-        this.productChartList.push(id)
+        this.productChartList.push(product)
+        this.productService.addChartProducts = this.productChartList
     }
 }

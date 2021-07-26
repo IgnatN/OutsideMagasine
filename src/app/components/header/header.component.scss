@@ -3,6 +3,9 @@ h1 {
     color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.div-head {
+    position: relative;
+}
 .list {
     display: flex;
     justify-content: space-around;
@@ -15,4 +18,13 @@ a {
 
 .li {
     list-style-type: none;
+}
+.bag {
+    color: white;
+}
+
+button {
+   position: absolute;
+   right: 100px;
+   top : 28px;
 }
